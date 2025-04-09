@@ -23,7 +23,10 @@
     min-width: 400px;
   }
 }
-.big-card__description p{
+.big-card__description {
     margin-top: 10px;
-    color: #b4acacee;
+
+    p{
+      color: #b4acacee;
+    }
   }
