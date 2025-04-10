@@ -1,5 +1,4 @@
 .container__big-card{
-  border: 1px solid white;
   margin: 8px 20px 0 20px;
   width: 400px;
   height: 550px;
@@ -21,6 +20,7 @@
   img{
     width: 100%;
     min-width: 400px;
+    border-radius: 10px;
   }
 }
 .big-card__description {
