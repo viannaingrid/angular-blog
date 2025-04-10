@@ -1,0 +1,45 @@
+.container__menu-bar{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container__logo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+
+  img{
+    width: 50px;
+  }
+
+  h2{
+    font-size: 16px;
+    font-style: italic;
+  }
+}
+
+.container__nav{
+  text-decoration: none;
+  width: 50%;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 3px;
+
+    li{
+      font-size: 13px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
