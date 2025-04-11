@@ -1,13 +1,13 @@
 <section class="container__content">
   <div class="content__cover">
-    <img src="https://files.tecnoblog.net/wp-content/uploads/2021/01/o_que_e_php_unsplash-e1612906186814.jpg" alt="">
+    <img src="{{ photoCover }}" alt="">
   </div>
   <div class="content__title">
-    <h1>Minha noticia</h1>
+    <h1>{{ contentTitle }}</h1>
     <hr>
   </div>
   <div class="content__description">
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, autem maxime repudiandae laboriosam pariatur quaerat voluptatem est corporis nisi nemo! Beatae saepe est debitis ea fugiat numquam sit quas mollitia.</p>
+    <p>{{ contentDescription }}</p>
   </div>
   <button class="content__button"><a [routerLink]="['']">Voltar</a></button>
 </section>
