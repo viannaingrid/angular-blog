@@ -1,12 +1,34 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../../data/dataFake'
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent {
-  photoCover:string = "https://files.tecnoblog.net/wp-content/uploads/2021/01/o_que_e_php_unsplash-e1612906186814.jpg"
-  contentTitle:string = "Minha noticia"
-  contentDescription:string = "testetstetstettststststststetetesfyasdchghadlygivgab.v.h.hvbhfevhregfuwerqyfuei  fhjhweijbjehwqgfuyibdlvhjhidnvj;hbß"
+  photoCover:string = ""
+  contentTitle:string = ""
+  contentDescription:string = ""
+
+  private id:string | null = "0"
+
+  constructor(
+    private route:ActivatedRoute
+  ){}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.id = params.get("id");
+      this.setValuesToComponent(this.id);
+    });
+  }
+
+  setValuesToComponent(id:string | null){
+  const result = dataFake.filter(article => article.id == id)[0]
+
+  this.contentTitle = result.title
+  this.contentDescription = result.description
+  this.photoCover = result.photoCover
+  }
 }
