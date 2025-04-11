@@ -7,11 +7,15 @@ import { Component, Input } from '@angular/core';
 })
 export class BigCardComponent {
   @Input()
-  photoCover:string = "https://blog.appicompany.com/wp-content/uploads/2024/01/Angular-new.png"
+  photoCover:string = ""
 
   @Input()
-  cardTitle:string = "Atualizações sobre o framework Angular"
+  cardTitle:string = ""
 
   @Input()
-  cardDescription:string = "O Angular tem recebido atualizações constantes que melhoram o desempenho, a segurança e a experiência do desenvolvedor. As versões mais recentes trazem melhorias na renderização com o Angular Ivy, suporte aprimorado a TypeScript e otimizações para aplicações mais rápidas e leves. Essas evoluções tornam o Angular cada vez mais eficiente para o desenvolvimento de interfaces modernas."
+  cardDescription:string = ""
+
+  @Input()
+  id:string = "0"
 }
+
